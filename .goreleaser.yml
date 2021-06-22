@@ -9,6 +9,15 @@ builds:
       - amd64
 
 archives:
+  - files:
+      - LICENSE.txt
+      - README.md
+      - CHANGELOG.md
+
+    format_overrides:
+      - goos: windows
+        format: zip
+
     # Set to true, if you want all files in the archive to be in a single directory.
     # If set to true and you extract the archive 'goreleaser_Linux_arm64.tar.gz',
     # you get a folder 'goreleaser_Linux_arm64'.
@@ -17,11 +26,4 @@ archives:
     # Default is false.
     wrap_in_directory: true
 
-    format_overrides:
-      - goos: windows
-        format: zip
 
-    files:
-      - LICENSE.txt
-      - README.md
-      - CHANGELOG.md
